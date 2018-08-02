@@ -1,0 +1,49 @@
+body {
+  font-family: "Palatino Linotype", "URW Palladio L", serif;
+  background: #b0b0c0;
+}
+div#article, div#navigation {
+  background: #f8f4e8;
+  color: black;
+  border: solid 2px #e8e4c8;
+}
+div#article {
+  padding: 1ex;
+  max-width: 48em;
+  margin: auto;
+}
+p {
+  text-indent: 1em;
+  text-align: justify;
+}
+h1 {
+  text-align: center;
+}
+div#navigation {
+  font-size: smaller;
+  font-family: "Lucida Sans", sans-serif;
+  padding: 0.5ex;
+  margin: 0 0 1ex 0;
+  text-align: center;
+}
+div#navigation a {
+  border: solid 1px black;
+  padding: 0.1ex 1ex;
+  margin: 0;
+  text-decoration: none;
+}
+p#publication {
+  font-size: smaller;
+  font-style: italic;
+  color: #404040;
+  text-align: right;
+  text-indent: 0;
+}
+table#index {
+  border-collapse: collapse;
+  margin: auto;
+}
+table#index td, table#index th {
+  border: solid 1px black;
+  padding: 0.2ex 1ex;
+}

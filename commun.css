@@ -19,6 +19,10 @@ p {
 h1 {
   text-align: center;
 }
+blockquote {
+  border-left: solid 2px #d8d4b8;
+  padding-left: 0.5ex;
+}
 div#navigation {
   font-size: smaller;
   font-family: "Lucida Sans", sans-serif;

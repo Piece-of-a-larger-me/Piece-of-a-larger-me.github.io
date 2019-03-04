@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR" xml:lang="fr-FR">
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<title>La vallée dérangeante de l'intelligence artificielle / A piece of a larger me</title>
+<link rel="stylesheet" type="text/css" href="./commun.css" />
+</head>
+<body>
+
+<div id="navigation">
+<a href="./">A piece of a larger me</a>
+<a href="https://github.com/Piece-of-a-larger-me/a_piece_of_a_larger_me/blob/master/la_vallee_derangeante_de_l_intelligence_artificielle.md">Source</a>
+<a href="la_vallee_derangeante_de_l_intelligence_artificielle.pdf">PDF individuel</a>
+<a href="./a_piece_of_a_larger_me.pdf">PDF complet</a>
+</div>
+
+<div id="article">
+
+<h1 id="la-vallée-dérangeante-de-lintelligence-artificielle">La vallée dérangeante de l'intelligence artificielle</h1>
+<p>Dans les années 1970, des roboticiens ont dégagé l'idée d'<em>uncanny valley</em> :
+une créature artificielle qui a l'air d'un humain mais pas tout à fait est
+beaucoup plus dérangeante pour nous qu'une qui a l'air plus clairement
+artificielle ou au contraire une qui est vraiment indiscernable d'un humain.
+Cette conjecture a largement été confirmée depuis, que ce soit avec de vrais
+robots ou, encore plus, des robots fictifs. En français, on dit « vallée
+dérangeante » ou « vallée de l'étrange », et le mot vallée fait référence à
+un creux dans le graphe de la fonction qui relie ressemblance et sympathie.</p>
+<p>J'ai l'impression qu'il se produit un phénomène similaire avec
+l'intelligence artificielle : elle nous dérange quand elle est trop
+intelligente mais pas assez pour l'être autant que nous.</p>
+<p>Mais quand j'écris ça, j'exploite le fait que le mot déranger a plusieurs
+sens : les robots de la vallée de l'étrange nous dérangent comme une idée ou
+une image dérangeante : ils nous mettent mal à l'aise, nous font peur de
+manière nébuleuse. Alors que le problème dont je veux parler avec
+l'intelligence artificielle, c'est qu'elle nous dérange comme un bruit ou du
+chahut : elle perturbe notre concentration et le flux de notre activité.</p>
+<p>Pour commencer, parlons d'ordinateurs, de déterminisme et d'apprentissage.</p>
+<p>Un ordinateur est quelque chose de fondamentalement déterministe : si on lui
+présente plusieurs fois la même entrée, il répondra à chaque fois le même
+résultat.</p>
+<p>Enfin, ça c'est la théorie. Un ordinateur est un dispositif électronique, et
+à ce titre exposé à toutes les fluctuations inévitables des mécanismes
+physiques, à fortiori parce qu'il est poussé très près des limites de ses
+possibilités. C'est pour ça qu'un ordinateur trop overclocké plante
+fréquemment ; un ordinateur tournant à sa vitesse nominale peut planter
+aussi pour la même raison, mais beaucoup plus rarement. D'autre part, la
+communication avec l'extérieur, avec les périphériques, fait intervenir des
+événements asynchrones dont l'instant précis, mesuré avec toute la précision
+de l'horloge du processeur, est imprévisible. Donc un ordinateur n'est pas
+vraiment déterministe.</p>
+<p>Mais en pratique, on peut presque faire comme s'il l'était, au moins en
+première approximation. Les manières évidentes de programmer comptent sur ce
+déterminisme et ont tendance à gommer le hasard issu des périphériques.</p>
+<p>Notons que ce hasard est parfois bienvenu, et pas seulement dans les jeux
+vidéos. En cryptographie, la clef qui protège une communication doit être
+choisie au hasard de manière à ce qu'un espion ne puisse pas la deviner.</p>
+<p>Pour un utilisateur humain, ce déterminisme est une aubaine. Le cerveau est
+tout spécialement optimisé pour détecter les déterminismes de ce genre. Et
+une fois qu'il les a détectés, il fait des prédictions, et utilise ces
+prédictions pour anticiper. C'est quelque chose de complètement
+omniprésent : nous anticipons le temps qu'une porte va mettre à s'ouvrir ou
+se fermer pour passer la main sans nous faire pincer ; nous anticipons que
+le jet qui va sortir d'une bouteille d'eau va aller vers l'avant pour mettre
+le verre au bon endroit, etc. C'est quelque chose que nos faisons vraiment
+très bien.</p>
+<p>Et donc nous anticipons les ordinateurs. Ils ont beau être rapides, il y a
+souvent des éléments lents qu'il faut attendre, à commencer par le disque
+dur et le réseau. Par exemple, je viens peut-être de cliquer sur un lien
+pour télécharger un fichier, je sais qu'on va me demander le nom sous lequel
+je veux l'enregistrer. Je peux anticiper, commencer à taper le nom alors que
+le téléchargement est toujours en cours. Il y a un petit risque, s'il y a
+une erreur imprévue, ce que j'ai tapé peut avoir des conséquences
+irritantes, mais c'est rare, un risque calculé. Et si je décide de le
+prendre, c'est parce que ça me conduit à une meilleure utilisation de mon
+temps, et donc une meilleure satisfaction.</p>
+<p>Hélas, les informaticiens semblent avoir fait leur mission de ruiner ce
+déterminisme et de rendre le comportement des ordinateurs difficile à
+prévoir, aléatoire, voire même erratique. Je vais évoquer trois sources de
+problèmes.</p>
+<p>La première manière dont ils s'y sont pris n'a rien à voir avec
+l'intelligence artificielle : le marché a conduit à faire des interfaces des
+ordinateurs des accessoires de mode.</p>
+<p>Pour apprendre à utiliser efficacement un ordinateur, il est important que
+les choses restent globalement inchangées. Si l'option dont on a de temps en
+temps besoin est toujours accessible sous le même onglet depuis le même
+menu, on retient progressivement comment la trouver de plus en plus
+rapidement. Si d'une version à l'autre elle change de place, cet
+apprentissage ne se produit pas.</p>
+<p>Mais d'un point de vue commercial, les quelques nouvelles fonctionnalités
+ajoutées à un logiciel arrivé à maturité ne sont pas suffisantes pour vendre
+une nouvelle version. Il faut du spectaculaire. Changer l'aspect graphique
+de l'interface est un moyen bon marché d'apporter de la nouveauté visible.
+Si ces changements portaient uniquement sur l'apparence, ce ne serait pas
+trop grave, même si la perte de repères visuels est déjà un problème. Mais
+ils s'accompagnent presque toujours de changements cosmétiques de
+comportement : onglets qui passent du haut au côté ou réciproquement,
+défilement horizontal ou vertical, etc.</p>
+<p>Il faut être honnête, certains changements d'interface améliorent réellement
+l'ergonomie. Il est difficile de juger l'équilibre optimal entre apporter
+aux utilisateurs une amélioration et préserver leurs repères. Mais il me
+semble clair que le rythme effréné que nous impose l'industrie actuellement
+est bien trop intense.</p>
+<p>La deuxième source d'aléa néfaste dans les interfaces vient d'une
+amplification malencontreuse des phénomènes aléatoires qui se produisent
+lors d'un fonctionnement normal, couplée à une programmation souvent
+négligente.</p>
+<p>Tout tient à l'impression de réactivité. Malgré leur vitesse, les
+ordinateurs ne peuvent pas répondre à tout instantanément, donc les
+interfaces prévoient des astuces pour faire patienter l'utilisateur ou lui
+permettre de continuer sans attendre.</p>
+<p>La solution passe souvent par un comportement asynchrone : l'opération est
+lancée, son résultat sera visible dans quelques secondes, en attendant
+l'ordinateur continue à réagir comme d'habitude. On le voit facilement à
+l'œuvre dans les propositions que les moteurs de recherche affichent souvent
+au fur et à mesure qu'on tape : si le réseau est rapide, les suggestions
+s'affichent immédiatement, s'il est lent elles mettent du temps à arriver ;
+mais dans tous les cas on peut continuer à taper.</p>
+<p>Ça a l'air très bien, mais imaginez que vous décidez d'arrêter de taper pour
+choisir une des suggestions juste au moment où de nouvelles suggestions
+arrivent : vous croyez cliquer sur une chose mais c'est une autre qui se
+glisse sous la souris.</p>
+<p>Ce n'est pas le seul exemple. Si on lance en même temps deux applications
+également gourmandes, on ne peut pas facilement prévoir celle qui
+s'affichera en premier, surtout si elles résident sur le même disque
+mécanique. Mais l'ordre d'affichage aura aussi pour conséquence le placement
+des fenêtres : la première arrivée aura la place de premier choix à l'écran,
+la seconde prendra les restes, ou bien au contraire passera devant alors
+qu'on s'apprêtait à utiliser la première.</p>
+<p>Les inconvénients de ces phénomènes asynchrones sont souvent amplifiés par
+la négligence des développeurs en ce qui concerne le focus. Le focus, c'est
+le curseur clignotant qui indique quelle ligne du formulaire va recevoir les
+touches qu'on tape, mais ce n'est pas tout, c'est aussi une ombre grisée ou
+un liséré en pointillé sur le bouton qui réagira si on appuie sur espace ou
+le lien qui s'ouvrira si on appuie sur entrée. Il suit les clics de la
+souris, mais on peut aussi le déplacer au clavier, avec la touche tabulation
+en général pour le faire passer à l'élément suivant, parfois aussi avec les
+touches fléchées.</p>
+<p>Un comportement déterministe du focus est indispensable à une utilisation
+efficace et confortable, car la manipulation au clavier est plus précise que
+la manipulation à la souris. Pourtant, il arrive régulièrement que le focus
+se perde dans les limbes à l'occasion d'une opération, souvent une opération
+faisant intervenir quelque chose d'asynchrone. Par exemple, je connais
+plusieurs sites web où le fait de cliquer sur un bouton qui charge de
+l'information supplémentaire rend ensuite impossible de défiler dans la page
+avec les flèches du clavier.</p>
+<p>J'en arrive à la troisième raison que je voulais évoquer pour les
+comportements erratiques des ordinateurs : l'intelligence artificielle, ou
+plus exactement son utilisation irréfléchie.</p>
+<p>Avant toute chose, je tiens à insister sur un fait : l'intelligence
+artificielle n'est pas quelque chose de nouveau. Quand on plaçait dans les
+fusées V-2 un accéléromètre connecté à deux circuits intégrateurs pour
+qu'elles évaluent leur altitude, c'était déjà de l'intelligence
+artificielle. Très rudimentaire, certes, mais de l'intelligence artificielle
+néanmoins. Quand une boîte de dialogue fait une régression linéaire sur la
+vitesse d'un traitement pour nous donner une estimation du temps qui reste,
+c'est encore de l'intelligence artificielle. C'en serait plus si elle
+utilisait une vraie méthode des moindres carrés couplée à une moyenne
+glissante plutôt qu'une bête extrapolation sur les deux dernières mesures,
+mais ça compte. Ce qu'on fait de nos jours sous cette appellation utilise
+des données beaucoup plus volumineuses et des traitements beaucoup plus
+complexes, mais le principe reste le même, il n'y a pas eu de progrès
+qualitatif important depuis.</p>
+<p>L'application de l'intelligence artificielle aux interfaces informatiques
+consiste à essayer de deviner ce que l'utilisateur veut, ce qu'il s'apprête
+à faire, pour lui présenter de la manière la plus accessible possible. Tel
+quel, ça a l'air bien. Et ponctuellement, au cas par cas, ça l'est. Mais
+l'utilisation d'un ordinateur n'est pas ponctuelle.</p>
+<p>On peut utiliser un ordinateur efficacement parce qu'on peut prévoir,
+anticiper, ses réactions. L'intelligence artificielle rend son comportement
+beaucoup plus complexe, donc beaucoup plus dur à anticiper. Si
+l'intelligence artificielle était assez bonne, elle proposerait à coup sûr
+ce qu'on souhaite, il n'y aurait qu'à valider. Mais ça n'existe pas, ce
+genre de précision relève de la télépathie ou de la divination, pas de
+l'intelligence, artificielle ou pas.</p>
+<p>Le problème réside ici dans deux acteurs qui cherchent à anticiper
+mutuellement ce que va faire l'autre. C'est une situation qui revient
+fréquemment en cas d'adversité, lors de duels fictifs par exemple qui
+peuvent donner des scènes très réussies, drôles ou spectaculaires. Mais dans
+la réalité, ça a plus tendance à ressembler à deux personnes qui essaient en
+vain de se céder le passage de manière symétrique.</p>
+<p>Je vais détailler un exemple concret. Un des logiciels que j'utilise
+fréquemment propose de deviner la fin de ce que j'ai tapé. Ici, « deviner »
+veut dire supposer que j'ai tapé le début d'un nom de fichier et proposer
+les fichiers qui sont effectivement présents et dont le nom correspond.
+Comme c'est un système que j'utilise beaucoup et dont je n'ai pas changé la
+configuration significativement depuis des années, je sais sans réfléchir
+exactement quoi taper pour désigner un fichier donné, et encore plus quand
+je dois taper plusieurs noms de fichiers similaires.</p>
+<p>Ce mécanisme peut être rendu plus intelligent en ajoutant des exceptions :
+une opérations sur un répertoire ne proposera que les répertoires, une
+commande pour lire des vidéos ne proposera pas les fichiers de code source,
+etc. Utilisé à bon escient, c'est très pratique. Mais parfois ça a des
+ratés. Il arrive fréquemment qu'on ait plusieurs fichiers dont le nom ne
+diffère que par un suffixe ; dans ce cas, taper leurs noms commence par les
+mêmes touches. Mais un jour, quelqu'un a remarqué que quand il s'agit de
+supprimer des fichiers, écrire deux fois le même est inutile, et a utilisé
+cette observation pour rendre la saisie plus intelligente : si un fichier
+est déjà dans la liste des fichiers à supprimer, on ne le propose pas.
+Hélas, cette optimisation rompt la régularité du comportement, et peut
+amener à de la confusion quand les touches tapées n'amènent pas au résultat
+attendu.</p>
+<p>Je cite cet exemple parce qu'il m'est familier : il m'est effectivement
+arrivé de m'embrouiller dans la saisie de noms de fichiers à supprimer
+précisément à cause de cette optimisation. Je pourrais citer d'autres
+exemples du même genre. Le cœur du problème, c'est que j'avais anticipé que
+l'ordinateur compléterait, mais je n'avais pas anticipé qu'il omettrait
+certains fichiers ; et de l'autre côté, l'ordinateur avait anticipé que je
+voulais taper des noms de fichiers, mais pas que j'avais anticipé comment il
+compléterait. De plus, le bénéfice apporté par cette optimisation est
+minuscule, et ne justifie pas l'effort qu'il m'a fallu pour retenir cette
+exception.</p>
+<p>J'ai un autre exemple, peut-être plus familier du grand public. Quelqu'un à
+l'aise avec un clavier tape vite, mais fait parfois des fautes de frappe,
+qu'il « sent » et corrige immédiatement. Quelqu'un moins à l'aise tape moins
+vite, mais la disposition du clavier constante lui permet de retrouver les
+touches rapidement. Confrontons ces personnes à une borne tactile pour
+acheter des tickets de train : la borne est intelligente, à chaque lettre,
+elle n'active sur le clavier que les touches qui correspondent à la suite du
+nom d'une station qui existe. Pour une personne pas du tout à l'aise, c'est
+une aide. Pour une personne moyennement à l'aise, les changements
+d'apparence vont parasiter les repères visuels et ralentir la recherche de
+la bonne lettre. Pour une personne très à l'aise, le comportement
+inhabituel, et même imprévisible (car il faudrait connaître la liste de
+toutes les stations et être capable de la filtrer mentalement très
+rapidement), peut rendre les choses très inconfortables : en cas de faute de
+frappe, la touche n'aura peut-être pas été prise en compte, mais les
+automatismes conduisent à l'effacer quand même.</p>
+<p>On pourrait multiplier les exemples. Pour les systèmes grand public, je
+pense qu'il y a une tendance générale qui ressort : l'intelligence
+artificielle a été déployée non pas pour compléter la compétence humaine
+mais pour la suppléer. Ça correspond à un nivellement par le bas, voire pire
+si des interférences se produisent comme dans les exemples que j'ai donnés.</p>
+<p>Pour utiliser un ordinateur efficacement, il faut se construire un modèle
+mental fidèle de son état, l'incorporer à la proprioception étendue que j'ai
+évoquée dans « <a href="mon_appartement_et_moi.html">Mon appartement e(s)t moi</a> ». Cependant, si on utilise un
+ordinateur, c'est souvent pour lui demander des tâches pour lesquelles on
+n'a pas les capacités mentales, et donc qu'on ne peut pas modéliser. Ça n'a
+de chance de marcher que si les résultats fournis par l'ordinateur sont
+gardés un minimum isolés de ce qui fait son comportement vis-à-vis de
+l'utilisateur. Ce n'est pas le cas actuellement, et à ma connaissance peu de
+gens pensent au problème en ces termes.</p>
+<p>Il y a une boutade qui dit : « je déteste les ordinateurs, ils font toujours
+ce que je leur dis, jamais ce que je veux » ; la vallée dérangeante de
+l'intelligence artificielle, c'est quand les ordinateurs ne sont toujours
+pas assez intelligents pour faire ce qu'on veut, mais se croient trop
+intelligents pour faire ce qu'on dit.</p>
+
+<p id="publication">Publié le 4 mars 2019</p>
+
+</div>
+
+</body>
+</html>
